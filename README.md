@@ -3,6 +3,8 @@
 Scripts and tips for working with the NVIDIA Jetson AGX Xavier
 
 ### Installing individual packages from Jetpack 4.1
+
+In your terminal set a variable for the parent data folder:
 ```
 jp_root="https://developer.download.nvidia.com/devzone/devcenter/mobile/jetpack_l4t/4.1/walpdzz/JetPackL4T_4.1_b5"
 ```
