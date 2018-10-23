@@ -85,3 +85,11 @@ wget $jp_root/Tegra_Linux_Sample-Root-Filesystem_R31.0.2_aarch64.tbz2
 wget $jp_root/Tegra_Multimedia_API_R31.0.2_aarch64.tbz2
 ```
 Once downloaded, you can install the .deb files as usual (click [here](https://unix.stackexchange.com/questions/159094/how-to-install-a-deb-file-by-dpkg-i-or-by-apt) if you are not familiar).
+
+### Setup SSH
+
+It should come with this pre-installed but in case it isn't:
+```
+sudo apt install openssh-client
+sudo apt install openssh-server
+```
