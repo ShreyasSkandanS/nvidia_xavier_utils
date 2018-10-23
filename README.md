@@ -1,6 +1,44 @@
 # NVIDIA Jetson AGX Xavier Utilities
 
-Scripts and tips for working with the NVIDIA Jetson AGX Xavier
+Scripts and tips for working with the NVIDIA Jetson AGX Xavier. A blog-post of my initial reactions to the Jetson Xavier Development Kit can be found [here](https://shreyasskandan.github.io/posts/jetsonxavier-initialthoughts/)
+
+### Setting Power Modes - 10W, 15W and 30W
+
+For a detailed view of power mode configuation, look at the nvpmodel.conf figure file:
+```
+cat /etc/nvpmodel.conf
+```
+To check your system's current settings:
+```
+nvpmodel -q --verbose
+```
+
+If you're interested in enabling or switching between specific modes,
+
+1. 10W Operating Mode
+```
+nvpmodel -m 1
+```
+
+2. 15W Operating Mode
+```
+# 4 CPU 
+nvpmodel -m 2
+```
+
+3. 30W Operating Mode
+```
+# all CPU
+nvpmodel -m 3
+# 6 CPU
+nvpmodel -m 4
+# 4 CPU
+nvpmodel -m 5
+# 2 CPU 
+nvpmodel -m  6
+```
+
+
 
 ### Installing individual packages from Jetpack 4.1
 
