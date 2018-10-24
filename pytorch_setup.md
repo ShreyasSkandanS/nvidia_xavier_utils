@@ -53,6 +53,7 @@ optimizations. No NVDLA cores were used.
 
 ### 4. Benchmark
 
-![Data](/figs/semseg_inf.gif)
+![GrayImage](/figs/gray_image.gif)
+![Output](/figs/semseg_inf.gif)
 ![SemSegBenchmark](/figs/semseg.png)
 
