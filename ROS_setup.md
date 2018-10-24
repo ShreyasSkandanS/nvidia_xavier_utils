@@ -46,4 +46,4 @@ rqt_image_view
 ```
 
 Some benchmarks on the **CUDA Semi Global Matching** ROS Node:
-![CUDA_Benchmark](https://github.com/ShreyasSkandanS/xavier_utils/figs/cuda_sgm.png)
+![CUDA_Benchmark](/figs/cuda_sgm.png)
