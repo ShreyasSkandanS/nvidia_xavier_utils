@@ -1,6 +1,6 @@
 # Extra ROS Related Tools
 
-Assuming that you have already [installed ROS](http://wiki.ros.org/melodic/Installation/Ubuntu) using the ROS-desktop variant, 
+Assuming that you have already [installed ROS](http://wiki.ros.org/melodic/Installation/Ubuntu) using the ROS-desktop variant,
 the following can help you install all the required software packages.
 
 ### CUDA SGM
@@ -21,10 +21,10 @@ Apart from some deprecated syntax warnings, it should build fine.
 3. Download test data
 
 ```
-a) Get the original bag file from this folder: 
+a) Get the original bag file from this folder:
    https://drive.google.com/open?id=1Qplh9fYt10t5H1p_adJkjhk3T7CjE2Xw
-b) Also download the calibration file 
-   file: fisheye_stereo_rectify.yml 
+b) Also download the calibration file
+   file: fisheye_stereo_rectify.yml
 ```
 
 4. Move the calibration file to the .ros folder
@@ -44,3 +44,6 @@ rosrun image_view disparity_view image:=/stereo_gpu/disparity
 # Disparity Image
 rqt_image_view
 ```
+
+Some benchmarks on the **CUDA Semi Global Matching** ROS Node:
+![CUDA_Benchmark](https://github.com/ShreyasSkandanS/xavier_utils/figs/cuda_sgm.png)
