@@ -1,0 +1,39 @@
+# Pytorch Installation on Jetson Xavier
+
+1. Install PyTorch using pip wheels
+
+Get the Pytorch pip wheels released by NVIDIA:
+Python3.6: https://drive.google.com/file/d/1h3nsVXskS8yQvLmhrL77m8mImusRy7OR/view
+Python2.7: https://drive.google.com/file/d/12ywd_wzkPAfsZIv8pP7lPb7YBSpzM44x/view
+
+For **Python3.6**
+```
+sudo apt-get install python3-pip
+pip3 install torch-1.0.0a0+8601b33-cp36-cp36m-linux_aarch64.whl
+pip3 install numpy
+```
+
+If you're using **Python2.7**
+```
+sudo apt-get install python-pip
+pip install torch-1.0.0a0+8601b33-cp27-cp27mu-linux_aarch64.whl
+pip install numpy
+```
+
+The following commands can be run using pip or pip3 depending your preferred
+python version
+
+2. Additional packages
+
+You will most likely need Torch Vision and the necessary dependencies
+
+```
+pip3 install torchvision --no-deps
+```
+and skimage
+```
+pip3 install Cython
+pip3 install scikit-image
+```
+
+3.
