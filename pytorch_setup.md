@@ -1,6 +1,6 @@
 # Pytorch Installation on Jetson Xavier
 
-1. Install PyTorch using pip wheels
+### 1. Install PyTorch using pip wheels
 
 Get the Pytorch pip wheels released by NVIDIA:
 Python3.6: https://drive.google.com/file/d/1h3nsVXskS8yQvLmhrL77m8mImusRy7OR/view
@@ -23,17 +23,36 @@ pip install numpy
 The following commands can be run using pip or pip3 depending your preferred
 python version
 
-2. Additional packages
+### 2. Additional packages
 
 You will most likely need Torch Vision and the necessary dependencies
 
 ```
 pip3 install torchvision --no-deps
 ```
-and skimage
+and Scikit-image
+```
+sudo apt-get install gfortran
+```
+
 ```
 pip3 install Cython
 pip3 install scikit-image
 ```
 
-3.
+### 3. Download SS_Segmentation package
+
+```
+git clone https://github.com/ShreyasSkandanS/ss_segmentation.git
+```
+
+Follow setup instructions (for testing/inference).
+
+On our data/model we noticed a 1.8X increase without any Xavier specific
+optimizations. No NVDLA cores were used.
+
+### 4. Benchmark
+
+![Data](/figs/semseg_inf.gif)
+![SemSegBenchmark](/figs/semseg.png)
+
