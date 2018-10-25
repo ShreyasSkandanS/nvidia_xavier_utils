@@ -93,3 +93,28 @@ It should come with this pre-installed but in case it isn't:
 sudo apt install openssh-client
 sudo apt install openssh-server
 ```
+
+### Samsung NVME SSD
+
+Installing an m.2 nvme is fairly simple. Remove the bottom 4 screws holding the
+rubber feet in place and snap the developer board off the heat sink. Install the
+drive and mount it in your OS. You can test read/writes as follows
+
+![DiskInstall](/figs/disk_install.png)
+
+Look for your drive:
+```
+lsblk
+```
+
+Mine is a Samsung 950 m.2 nvme SSD and has the following identifier:
+
+```
+sudo hdparm -Tt /dev/nvme0n1
+```
+
+You can also use the disks utility and benchmark READs and WRITEs using the GUI:
+
+![Wnvme](/figs/r_benchmark.png)
+![RWnvme](/figs/rw_benchmark.png)
+
