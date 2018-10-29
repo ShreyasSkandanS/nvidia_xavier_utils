@@ -1,6 +1,6 @@
 # Pytorch Installation on Jetson Xavier
 
-### 1. Install PyTorch using pip wheels
+## 1. Install PyTorch and test code
 
 Get the Pytorch pip wheels released by NVIDIA:
 Python3.6: https://drive.google.com/file/d/1h3nsVXskS8yQvLmhrL77m8mImusRy7OR/view
@@ -23,7 +23,7 @@ pip install numpy
 The following commands can be run using pip or pip3 depending your preferred
 python version
 
-### 2. Additional packages
+#### b) Additional packages
 
 You will most likely need Torch Vision and the necessary dependencies
 
@@ -40,7 +40,7 @@ pip3 install Cython
 pip3 install scikit-image
 ```
 
-### 3. Download SS_Segmentation package
+#### c) Download SS_Segmentation package
 
 ```
 git clone https://github.com/ShreyasSkandanS/ss_segmentation.git
@@ -51,9 +51,37 @@ Follow setup instructions (for testing/inference).
 On our data/model we noticed a 1.8X increase without any Xavier specific
 optimizations. No NVDLA cores were used.
 
-### 4. Benchmark
+#### d) Benchmark
 
 ![GrayImage](/figs/gray_image.gif)
 ![Output](/figs/semseg_inf.gif)
 ![SemSegBenchmark](/figs/semseg.png)
+
+## 2. Loading Multi-GPU Trained Models
+
+If you've trained a network on a multi-gpu setup and naively exported the model
+to a *model.pth.tar* format, you're likely to see something like this show up as
+an error:
+
+```
+torch.cuda.nccl.NcclError: System Error (2)
+```
+
+For the same reasons mentioned
+[here](https://shreyasskandan.github.io/posts/pytorch_notes/), load your model
+and remove all bindings to the *DataParallel* class and you should be able
+successfully run your code,
+
+```
+pretrained_model = checkpoint['model']
+new_model = SomeNetwork()
+from collections import OrderedDict
+new_model_dict = OrderedDict()
+for k,v in pretrained_model.state_dict().items():
+    # Drop the "Module." characters from the name
+    name = k[7:]
+    new_model_dict[name] = v
+new_model.load_state_dict(new_model_dict)
+```
+
 
