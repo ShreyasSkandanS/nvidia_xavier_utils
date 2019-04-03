@@ -14,3 +14,7 @@ Scripts and tips for working with the NVIDIA Jetson AGX Xavier. A blog-post of m
 3. [PyTorch Tips](pytorch_setup.md)
   * Installing PyTorch from pip wheel
   * Testing inference of ss_segmentation based on ERFNet
+4. [Decasing Developer Kit](decasing_xavier.md)
+  * Removing the cooling enclosure
+  * Detaching module from heat sink and enclosure
+  * Weight of bare module and carrier board
