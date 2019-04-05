@@ -1,6 +1,6 @@
 # Decasing the AGX Xavier Developer Kit
 
-### WARNING: NVIDIA does not recommend doing this and neither do I. But we are a research lab afterall focused on lightweight autonomy and that case doesn't cut it for us. 
+### WARNING: NVIDIA does not recommend doing this and neither do I. But we are a research lab afterall focused on lightweight autonomy and that case doesn't cut it for us (puns may or may not be intended). 
 
 ## 1. Band saw to the top
 
