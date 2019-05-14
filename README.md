@@ -18,3 +18,6 @@ Scripts and tips for working with the NVIDIA Jetson AGX Xavier. A blog-post of m
   * Removing the cooling enclosure
   * Detaching module from heat sink and enclosure
   * Weight of bare module and carrier board
+4. [TensorRT Acceleration](tensorrt_acceleration.md)
+  * What is TensorRT and why should I use it?
+  * PyTorch pre-trained model to TensorRT
