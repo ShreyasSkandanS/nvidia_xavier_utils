@@ -84,43 +84,5 @@ for k,v in pretrained_model.state_dict().items():
 new_model.load_state_dict(new_model_dict)
 ```
 
-## 3. ONNX and PyTorch
-
-
-#### a) Export PyTorch Model to ONNX
-
-Based on
-[this](https://github.com/onnx/tutorials/blob/master/tutorials/PytorchOnnxExport.ipynb)
-tutorial.
-
-Install Protobuf compiler
-```
-sudo apt-get install protobuf-compiler libprotoc-dev
-```
-
-Install ONNX
-```
-pip3 install onnx
-```
-
-Check if your install is working
-```
-python3 -c "import onnx"
-```
-
-For PyTorch, it appears there's official support for ONNX in the form of a
-torch.onnx library. Check to see if your version of PyTorch contains this
-library:
-```
-import torch.onnx
-```
-
-Exporting your PyTorch model to ONNX is then a matter of calling the
-*torch.onnx.export* function. You can find more details aout this method here;
-
-```
-import torch.onnx
-help(torch.onnx.export)
-```
 
 

@@ -11,10 +11,14 @@ Original Documentation:
 
 #### 1. TensorRT
 
+![TensorRT](figs/tensorrt_ov.png)
+
 ##### What is TensorRT?
 ```
 The core of TensorRT™ is a C++ library that facilitates high performance inference onNVIDIA graphics processing units (GPUs). It is designed to work in a complementaryfashion with training frameworks such as TensorFlow, Caffe, PyTorch, MXNet, etc. Itfocuses specifically on running an already trained network quickly and efficiently on aGPU for the purpose of generating a result (a process that is referred to in various placesas scoring, detecting, regression, or inference).
 ```
+
+![Phases](figs/trt_phases.png)
 
 ##### Build Phase:
 ```
@@ -38,6 +42,11 @@ What's going on?
 The Engine interface provides allow the application to executing inference. Itsupports synchronous and asynchronous execution, profiling, and enumeration andquerying of the bindings for the engine inputs and outputs.
 ```
 
+#### Supported Platforms
+
+```
+C++ Implementation on all platforms and Python on x86
+```
 
 
 #### Export a pre-trained PyTorch Model to ONNX
