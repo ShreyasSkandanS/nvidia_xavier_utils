@@ -93,7 +93,7 @@ torch.onnx.export(model, dummy_input, "onnx_model_name.onnx")
 
 ### 3. Loading an ONNX Model into TensorRT (C++)
 
-```
+```cpp
 /* Function: Converting ONNX Model to TensorRT Model */
 void onnxToTRTModel(const std::string& modelFile,
                     unsigned int maxBatchSize,
