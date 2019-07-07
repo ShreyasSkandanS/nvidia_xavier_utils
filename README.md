@@ -1,4 +1,4 @@
-# NVIDIA Jetson AGX Xavier Utilities
+#NVIDIA Jetson AGX Xavier Utilities
 
 Scripts and tips for working with the NVIDIA Jetson AGX Xavier. A blog-post of my initial reactions to the Jetson Xavier Development Kit can be found [here](https://shreyasskandan.github.io/posts/jetsonxavier-initialthoughts/)
 
@@ -21,3 +21,6 @@ Scripts and tips for working with the NVIDIA Jetson AGX Xavier. A blog-post of m
 4. [TensorRT Acceleration](tensorrt_acceleration.md)
   * What is TensorRT and why should I use it?
   * PyTorch pre-trained model to TensorRT
+5. [Other things to know](other.md)
+  * USB Bandwidth
+  * 
